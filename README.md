@@ -29,6 +29,8 @@ The design tokens were read from the live site's Tailwind build, not eyeballed:
 - Super-category tabs (Photography / Gaming / Outdoor / Entertainment). These are sticky on desktop and sit on the purple block on mobile.
 - Sub-category sidebar (All, GTA VI, PS5, Xbox, VR, Racing Wheel, Big Screen) with active states.
 - "Gaming Consoles" hero banner with the side artwork and brand logos.
+- SharePal's in-grid promo strips (Asset Partner after row 1, Earn With Us after row 2), desktop and mobile artwork.
+- The date picker opens automatically on the first visit of a session, like the live site.
 - Product grid with Trending/New/Vote-to-Launch badges, a wishlist heart, the waitlist progress card and Add to Cart. It shows 12 products at first, then **Show More**.
 - "Select your Dates" modal: a two-month calendar on desktop and a bottom sheet on mobile, with the rental-period and chargeable-period logic. Example: deliver on the 5th, pick up on the 8th, and you're charged for 2 days.
 - FAQ accordion, breadcrumb, a marquee of Google reviews that pauses on hover, stats, and the footer (category accordions on mobile, collapsible SEO text, link columns).
