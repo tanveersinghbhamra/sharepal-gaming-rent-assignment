@@ -55,6 +55,8 @@
     --color-gray-500: #898989;
     --color-gray-600: #7a7a7a;
     --color-gray-800: #595959;
+    --color-coupon-blue: #edf4ff;
+    --color-coupon-lime: #f7ffea;
     --color-gray-900: #101010;
 
     --color-decorative-blue: #0079bc;
@@ -227,6 +229,9 @@
 @utility max-h-sheet {
     max-height: 85dvh;
 }
+@utility max-h-dialog {
+    max-height: 90svh;
+}
 @utility bottom-nav-offset {
     @media (width < 48rem) {
         bottom: calc(5rem + env(safe-area-inset-bottom));
@@ -307,5 +312,94 @@
     .reveal {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* ---------- AI chat FAB: SharePal's 3s Lottie loop rebuilt in CSS (30fps, 90 frames) ---------- */
+.chat-fab g {
+    transform-box: fill-box;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1);
+}
+.chat-fab .lime-new {
+    transform-origin: left bottom;
+    animation-name: chat-lime-new;
+}
+.chat-fab .lime-old {
+    animation-name: chat-lime-old;
+}
+.chat-fab .blue-new {
+    transform-origin: right bottom;
+    animation-name: chat-blue-new;
+}
+.chat-fab .blue-old {
+    animation-name: chat-blue-old;
+}
+.chat-fab .dot {
+    animation-name: chat-dot;
+}
+@keyframes chat-lime-new {
+    0% {
+        transform: translateY(0) scale(0);
+        animation-timing-function: cubic-bezier(0.167, 0, 0.833, 1);
+    }
+    11.11%,
+    55.56% {
+        transform: translateY(0) scale(1);
+    }
+    66.67%,
+    100% {
+        transform: translateY(-50px) scale(1);
+    }
+}
+@keyframes chat-lime-old {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    11.11%,
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+@keyframes chat-blue-new {
+    0%,
+    55.56% {
+        transform: scale(0);
+    }
+    66.67%,
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes chat-blue-old {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    11.11%,
+    56.66% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    56.67%,
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+/* two hops of 20 units, 10 frames each, then rest */
+@keyframes chat-dot {
+    0%,
+    22.22%,
+    44.44%,
+    100% {
+        transform: translateY(0);
+    }
+    11.11%,
+    33.33% {
+        transform: translateY(-20px);
     }
 }

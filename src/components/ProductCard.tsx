@@ -63,7 +63,8 @@ function ProductCardBase({ product, index }: { product: Product; index: number }
 
     return (
         <article
-            className="group relative flex h-full animate-fade-up flex-col overflow-hidden rounded-2xl bg-gray-100 p-2.5 leading-5 transition-all duration-300 md:rounded-3xl md:bg-transparent md:p-3 md:hover:bg-gray-100 md:hover:shadow-card"
+            id={`product-${product.id}`}
+            className="group relative flex h-full animate-fade-up scroll-mt-40 flex-col overflow-hidden rounded-2xl bg-gray-100 p-2.5 leading-5 transition-all duration-300 md:rounded-3xl md:bg-transparent md:p-3 md:hover:bg-gray-100 md:hover:shadow-card"
             style={{ animationDelay: `${(index % 12) * 40}ms` }}
         >
             {/* image */}
@@ -201,6 +202,9 @@ function ProductCardBase({ product, index }: { product: Product; index: number }
                                         </>
                                     )}
                                 </div>
+                                <span className="rounded bg-secondary-500 px-1 py-px text-o3 text-secondary-900 md:px-1.5 md:py-0.5 md:text-sh7">
+                                    Incl. of GST
+                                </span>
                             </div>
                             <div className="flex items-center gap-1 max-md:w-full md:gap-2">
                                 {oos ? (

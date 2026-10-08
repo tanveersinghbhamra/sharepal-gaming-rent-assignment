@@ -316,8 +316,8 @@ export default function Footer() {
                     <p>© 2026. SWNAC E-Kiraya Services Pvt Ltd</p>
                     <p>Made with ♥️ for India</p>
                 </div>
-                <p className="-mt-4 text-center text-tiny text-primary-300/70 md:-mt-8">
-                    Front-end recreation built as a hiring assignment for SharePal · product data
+                <p className="-mt-4 mb-4 text-center text-tiny text-primary-300/70 md:-mt-8 mb-4">
+                    Frontend recreation built by Tanveersingh Bhamra as a hiring assignment for SharePal · product data
                     from the provided product-list.json
                 </p>
             </div>

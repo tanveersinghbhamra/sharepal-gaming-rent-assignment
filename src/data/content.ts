@@ -61,18 +61,12 @@ export const subCategories: SubCategory[] = [
     },
 ];
 
-export const cities = [
-    "Bangalore",
-    "Mumbai",
-    "Delhi",
-    "Pune",
-    "Hyderabad",
-    "Chennai",
-    "Kolkata",
-    "Gurgaon",
-    "Noida",
-    "Ahmedabad",
-];
+/** same order + artwork as the live "Select Your City" dialog */
+export const popularCities = ["Delhi", "Hyderabad", "Mumbai", "Pune", "Chennai", "Bangalore"].map(
+    (name) => ({ name, icon: `https://images.sharepal.in/cities/${name.toLowerCase()}.svg` }),
+);
+export const otherCities = ["Faridabad", "Kolkata", "Gurgaon", "Noida", "Ghaziabad"];
+export const cities = [...popularCities.map((c) => c.name), ...otherCities];
 
 export const faqs = [
     {
