@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   SharePal design tokens (values read from the live site's Tailwind
+   build: colours, type scale, radii). Tailwind v4 @theme.
+------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-ubuntu: "Ubuntu", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* primary (SharePal blue) */
+  --color-primary-100: #e8ecfd;
+  --color-primary-150: #d1dafa;
+  --color-primary-200: #bac7f8;
+  --color-primary-300: #758ff1;
+  --color-primary-400: #476aed;
+  --color-primary-500: #1945e8;
+  --color-primary-600: #1437ba;
+  --color-primary-700: #0f298b;
+  --color-primary-800: #0a1c5d;
+  --color-primary-850: #081546;
+  --color-primary-900: #030d31;
+
+  /* secondary (SharePal lime) */
+  --color-secondary-100: #f5ffe5;
+  --color-secondary-400: #b1ff33;
+  --color-secondary-500: #9eff00;
+  --color-secondary-600: #91ea00;
+  --color-secondary-850: #2f4d00;
+  --color-secondary-900: #1f3300;
+
+  --color-category-purple: #8a2be2;
+  --color-category-purple-dark: #4c187c;
+
+  --color-neutral-100: #fbfbfb;
+  --color-neutral-150: #f4f6f7;
+  --color-neutral-200: #e2e7ea;
+  --color-neutral-250: #d5dce0;
+  --color-neutral-300: #9c9fa8;
+  --color-neutral-400: #7d808d;
+  --color-neutral-500: #5d6171;
+  --color-neutral-600: #4a4e5c;
+  --color-neutral-700: #383a44;
+  --color-neutral-900: #090a0b;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #ffffff;
+  --color-gray-150: #f2f2f2;
+  --color-gray-200: #e3e3e3;
+  --color-gray-300: #a6a6a6;
+  --color-gray-400: #979797;
+  --color-gray-500: #898989;
+  --color-gray-600: #7a7a7a;
+  --color-gray-800: #2b2b2b;
+  --color-gray-900: #101010;
+
+  --color-decorative-blue: #0079bc;
+  --color-decorative-pink: #e819ae;
+  --color-decorative-orange: #e86419;
+  --color-success-600: #0d9845;
+  --color-success-700: #0a7234;
+  --color-destructive-500: #f04438;
+  --color-warning-500: #f79009;
+
+  --radius-4xl: 28px;
+
+  /* SharePal type scale: size / line-height / weight */
+  --text-d4: 3rem;        --text-d4--line-height: 3.5rem;   --text-d4--font-weight: 700; --text-d4--letter-spacing: -0.03rem;
+  --text-d5: 2.5rem;      --text-d5--line-height: 3rem;     --text-d5--font-weight: 700; --text-d5--letter-spacing: -0.025rem;
+  --text-d7: 1.5rem;      --text-d7--line-height: 1.75rem;  --text-d7--font-weight: 700; --text-d7--letter-spacing: -0.02em;
+  --text-h2: 1.5rem;      --text-h2--line-height: 2rem;     --text-h2--font-weight: 700;
+  --text-h4: 1.25rem;     --text-h4--line-height: 1.75rem;  --text-h4--font-weight: 700;
+  --text-h5: 1.25rem;     --text-h5--line-height: 1.75rem;  --text-h5--font-weight: 500;
+  --text-h6: 1.125rem;    --text-h6--line-height: 1.5rem;   --text-h6--font-weight: 700;
+  --text-sh1: 1.125rem;   --text-sh1--line-height: 1.5rem;  --text-sh1--font-weight: 500;
+  --text-sh2: 1rem;       --text-sh2--line-height: 1.5rem;  --text-sh2--font-weight: 700;
+  --text-sh3: 1rem;       --text-sh3--line-height: 1.5rem;  --text-sh3--font-weight: 600;
+  --text-sh4: 0.875rem;   --text-sh4--line-height: 1.125rem; --text-sh4--font-weight: 700;
+  --text-sh5: 0.875rem;   --text-sh5--line-height: 1.125rem; --text-sh5--font-weight: 600;
+  --text-sh6: 0.75rem;    --text-sh6--line-height: 1rem;    --text-sh6--font-weight: 700;
+  --text-sh7: 0.75rem;    --text-sh7--line-height: 1rem;    --text-sh7--font-weight: 600;
+  --text-b2: 1rem;        --text-b2--line-height: 1.5rem;   --text-b2--font-weight: 500;
+  --text-b4: 0.875rem;    --text-b4--line-height: 1.125rem; --text-b4--font-weight: 500;
+  --text-b5: 0.875rem;    --text-b5--line-height: 1.125rem; --text-b5--font-weight: 400;
+  --text-b6: 0.75rem;     --text-b6--line-height: 1rem;     --text-b6--font-weight: 500;
+  --text-bt2: 1rem;       --text-bt2--line-height: 1.25rem; --text-bt2--font-weight: 600;
+  --text-bt3: 0.875rem;   --text-bt3--line-height: 1rem;    --text-bt3--font-weight: 600;
+  --text-bt4: 0.75rem;    --text-bt4--line-height: 1rem;    --text-bt4--font-weight: 600;
+  --text-o2: 0.75rem;     --text-o2--line-height: 1rem;     --text-o2--font-weight: 600;
+  --text-o3: 0.625rem;    --text-o3--line-height: 0.875rem; --text-o3--font-weight: 700;
+  --text-o4: 0.625rem;    --text-o4--line-height: 0.875rem; --text-o4--font-weight: 500;
+
+  --animate-marquee: marquee var(--duration, 60s) linear infinite;
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pop: pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+  }
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 1216px) {
+    max-width: 1216px;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  body {
+    background: var(--color-neutral-150);
+    color: #020817;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  :focus-visible { outline: 2px solid var(--color-primary-500); outline-offset: 2px; }
+}
+
+.text-gradient-review {
+  background-image: linear-gradient(92deg, #002cd1 27.44%, #1945e8 48.86%, #7ec904 70.28%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* accordion height animation driven by grid rows */
+.accordion-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.25s ease-out; }
+.accordion-panel[data-open="true"] { grid-template-rows: 1fr; }
+.accordion-panel > div { overflow: hidden; }
+
+/* scroll-reveal */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  60%, 100% { transform: translateX(100%); }
+}
