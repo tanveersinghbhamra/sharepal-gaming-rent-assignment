@@ -1,5 +1,7 @@
-import { redirect } from "next/navigation";
+import GamingPage from "@/components/GamingPage";
 
+/* Serve the page directly (no redirect) so link previews (WhatsApp, LinkedIn, Slack)
+   read the Open Graph tags on the bare domain too. */
 export default function Home() {
-  redirect("/bangalore/gaming-gadgets-on-rent");
+    return <GamingPage />;
 }
