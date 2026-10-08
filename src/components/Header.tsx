@@ -67,7 +67,7 @@ export default function Header() {
     return (
         <header
             ref={headerRef}
-            className={`fixed inset-x-0 top-0 z-50 flex w-full flex-col items-center justify-center bg-category-purple-dark pt-safe pb-3 backdrop-blur-sm transition-all duration-500 ${
+            className={`fixed inset-x-0 top-0 z-50 flex w-full flex-col items-center justify-center bg-category-purple-dark pt-safe pb-4 backdrop-blur-sm transition-all duration-500 ${
                 hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
             }`}
         >
